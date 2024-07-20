@@ -1,0 +1,21 @@
+<div class="tile-container">
+    <div class="tile-left">
+        <img [src]="detail.imageUrl" alt="detail.name" />
+    </div>
+    <div class="tile-center">
+        <div class="title" routerLink="/cocktail-details/{{detail.id}}">{{detail.name}}</div>
+        <div class="pill" [ngClass]="detail.isAlcoholic ? 'cocktail': 'mocktail'">{{detail.isAlcoholic ? 'Alcoholic':
+            'Non Alcoholic'}}</div>
+        <div>
+            <span class="desc" *ngFor="let ingredient of detail.ingredients; let last = last">{{ingredient}}
+                <ng-container *ngIf="!last">
+                    |
+                </ng-container>
+            </span>
+        </div>
+    </div>
+    <div class="tile-right">
+        <span class="icon-star" [ngClass]="favList.includes(detail.id) ? 'active':''" (click)="toggleFav(detail.id)"
+            id="star-{{detail.id}}"></span>
+    </div>
+</div>

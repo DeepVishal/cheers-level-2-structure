@@ -1,0 +1,61 @@
+button {
+    display: block;
+}
+
+.container.details-container {
+
+    display: inline-flex;
+
+    .left-section {
+        height: 15rem;
+        width: 15rem;
+        margin-right: 1rem;
+
+        image {
+            max-width: 15rem;
+        }
+    }
+
+    .right-section {
+
+        .title {
+
+            h3 {
+                display: inline;
+                margin: 0 0.5rem 0 0;
+            }
+
+            span {
+                cursor: pointer;
+            }
+        }
+
+        h4 {
+            width: 10rem;
+            display: inline-block;
+            margin-left: 0;
+        }
+
+        ul {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .pill {
+            display: inline;
+            padding: 0 0.5rem 0.1rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+
+            &.mocktail {
+                background-color: #A2BE8A;
+                color: white;
+            }
+
+            &.cocktail {
+                background-color: #587DA9;
+                color: white;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.container {
+
+    padding: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: #d8dce0;
+
+    input {
+        border: 0.1rem solid;
+        border-radius: 0.3rem;
+    }
+}
+
+.list-container {
+    width: 100%;
+
+    .margin-right {
+        margin-right: 0.5rem;
+    }
+
+    .margin-left {
+        margin-left: 0.5rem;
+    }
+
+    .list-align {
+        width: calc(50% - 0.5rem);
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+}

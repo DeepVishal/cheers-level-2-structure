@@ -1,0 +1,60 @@
+.tile-container {
+    border: 0.1rem solid #C6CED7;
+    border-radius: 0.5rem;
+    height: auto;
+    display: inline-flex;
+    width: 100%;
+    position: relative;
+
+    .tile-left {
+        height: 10rem;
+        width: 10rem;
+        margin-right: 0.5rem;
+        border-radius: 0.4rem 0 0 0.4rem;
+
+        img {
+            max-width: 10rem;
+            border-radius: 0.4rem 0 0 0.4rem;
+        }
+    }
+
+    .tile-center {
+        margin-right: 1.2rem;
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .pill {
+            display: inline;
+            padding: 0 0.5rem 0.1rem;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+
+            &.mocktail {
+                background-color: #A2BE8A;
+                color: white;
+            }
+
+            &.cocktail {
+                background-color: #587DA9;
+                color: white;
+            }
+        }
+
+        .desc {
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+    }
+
+    .tile-right {
+        margin-right: 0.5rem;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,10 @@
+<div class="container">
+    <h4>Filters</h4>
+    <label for="name">Cocktail name</label>
+    <input type="text" id="name" (input)="filterData($event)">
+</div>
+<div class="list-container" *ngIf="filteredCocktailList && filteredCocktailList.length > 0">
+    <ng-container *ngFor="let detail of filteredCocktailList; let even = even;">
+        <app-tile [detail]="detail" class="list-align" [ngClass]="even ? 'margin-right' : 'margin-left'"></app-tile>
+    </ng-container>
+</div>

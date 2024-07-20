@@ -1,0 +1,38 @@
+<button (click)="goBack()">
+    Back Button
+</button>
+<div class="container details-container" *ngIf="details else errorBlock">
+    <div class="left-section">
+        <img [src]="details.imageUrl" alt="details.name" />
+    </div>
+    <div class="right-section">
+        <div class="title">
+            <h3> {{details.name}}</h3>
+            <span class="icon-star" [ngClass]="favList.includes(details.id) ? 'active':''" id="star-{{details.id}}"
+                (click)="toggleFav(details.id)"></span>
+        </div>
+        <div>
+            <h4>
+                Type:
+            </h4>
+            <div class="pill" [ngClass]="details.isAlcoholic ? 'cocktail': 'mocktail'">
+                {{details.isAlcoholic ? 'Alcoholic' : 'Non Alcoholic'}}
+            </div>
+        </div>
+        <div>
+            <h4>
+                Ingredients:
+            </h4>
+            <ul class="desc">
+                <li *ngFor="let ingredient of details.ingredients; let last = last">{{ingredient}}</li>
+            </ul>
+        </div>
+        <div>
+            <h4>
+                Instructions:
+            </h4>
+            <div>{{details.instructions}}</div>
+        </div>
+    </div>
+</div>
+<ng-template #errorBlock>Sorry! No details present, please check the Cocktail id</ng-template>
